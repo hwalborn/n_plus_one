@@ -61,6 +61,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def example
+    users = User.limit(10)
+    users.each do |user|
+      puts user.name
+    end
+    redirect_to users_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
