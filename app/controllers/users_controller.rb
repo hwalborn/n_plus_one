@@ -62,9 +62,9 @@ class UsersController < ApplicationController
   end
 
   def example
-    users = User.limit(10)
-    users.each do |user|
-      puts user.name
+    dogs = Dog.all
+    dogs.each do |dog|
+      puts dog.user.name
     end
     redirect_to users_path
   end
